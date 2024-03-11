@@ -1,0 +1,18 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit:
+  // https://code.visualstudio.com/docs/getstarted/settings#_settingsjson
+
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "heading.docstring.xxx",
+        "settings": {
+          "fontStyle": "bold",
+          "foreground": "#569cd6"
+        }
+      }
+    ]
+  }
+}

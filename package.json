@@ -1,0 +1,54 @@
+{
+  "private": false,
+  "name": "python-docstring-highlighter",
+  "displayName": "Python Docstring Highlighter",
+  "description": "Syntax highlighting for python docstring.",
+  "icon": "icon.png",
+  "version": "0.1.0",
+  "keywords": [
+    "python",
+    "docstring",
+    "highlighter",
+    "google",
+    "sphinx",
+    "restructuredtext",
+    "rest"
+  ],
+  "author": {
+    "name": "Rodolphe Barbanneau",
+    "email": "rodolphe.barbanneau@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodolphebarbanneau/python-docstring-highlighter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rodolphebarbanneau/python-docstring-highlighter/issues"
+  },
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "publisher": "rodolphebarbanneau",
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "scopeName": "source.docstring.python",
+        "path": "./syntaxes/base.tmLanguage.json",
+        "injectTo": ["source.python"]
+      },
+      {
+        "scopeName": "source.docstring.google.python",
+        "path": "./syntaxes/google.tmLanguage.json",
+        "injectTo": ["source.python"]
+      },
+      {
+        "scopeName": "source.docstring.sphinx.python",
+        "path": "./syntaxes/sphinx.tmLanguage.json",
+        "injectTo": ["source.python"]
+      }
+    ]
+  }
+}

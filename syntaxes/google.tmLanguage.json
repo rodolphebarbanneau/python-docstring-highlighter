@@ -1,0 +1,45 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Python Docstring (google)",
+	"scopeName": "source.docstring.google.python",
+	"injectionSelector": "L:string.quoted.docstring.multi.python",
+	"patterns": [
+		{
+      "captures": {
+        "1": {
+          "name": "entity.name.tag.docstring.google.python"
+        },
+        "2": {
+          "name": "punctuation.definition.tag.docstring.google.python"
+        }
+      },
+      "match": "(?:^\\s*)([A-Z]\\w*)(:+)(?:$)",
+      "name": "heading.docstring.google.python"
+    },
+		{
+      "captures": {
+        "1": {
+          "name": "entity.name.variable.docstring.google.python"
+        },
+        "2": {
+          "name": "punctuation.definition.tag.docstring.google.python"
+        }
+      },
+      "match": "(?:^\\s*)((?:\\*\\*|\\*|_)?[a-z]\\w*)(\\s*(?:\\(.*\\))?:+(?:\\s+\\S+$)?)(?:\\s)",
+      "name": "variable.docstring.google.python"
+    },
+		{
+      "captures": {
+        "1": {
+          "name": "entity.name.type.instance.docstring.google.python"
+        },
+        "2": {
+          "name": "punctuation.definition.tag.docstring.google.python"
+        }
+      },
+      "match": "(?:^\\s*)([A-Z]\\w*)(:+)(?:\\s)",
+      "name": "type.docstring.google.python"
+    }
+	],
+	"repository": {}
+}

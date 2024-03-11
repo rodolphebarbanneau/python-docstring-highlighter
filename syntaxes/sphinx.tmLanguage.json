@@ -1,0 +1,55 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Python Docstring (sphinx)",
+	"scopeName": "source.docstring.sphinx.python",
+	"injectionSelector": "L:string.quoted.docstring.multi.python",
+	"patterns": [
+    {
+      "match": "(?:^\\s*)(=|-){3,}(?:$)",
+      "name": "punctuation.definition.tag.docstring.sphinx.python, heading.docstring.sphinx.python"
+    },
+		{
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.docstring.sphinx.python"
+        },
+        "2": {
+          "name": "entity.name.tag.docstring.sphinx.python"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.docstring.sphinx.python"
+        },
+        "4": {
+          "name": "entity.name.variable.docstring.sphinx.python"
+        },
+        "5": {
+          "name": "punctuation.definition.tag.end.docstring.sphinx.python"
+        }
+      },
+      "match": "(?:^\\s*)(:)(\\w+)(?:(\\s|(?:[\\w\\s]*\\s))?((?:\\*\\*|\\*|_)?[a-z]\\w*)?)((?:=[^:]+)?:)(?:\\s)",
+      "name": "variable.docstring.sphinx.python"
+    },
+		{
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.docstring.sphinx.python"
+        },
+        "2": {
+          "name": "entity.name.tag.docstring.sphinx.python"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.docstring.sphinx.python"
+        },
+        "4": {
+          "name": "entity.name.type.instance.docstring.sphinx.python"
+        },
+        "5": {
+          "name": "punctuation.definition.tag.end.docstring.sphinx.python"
+        }
+      },
+      "match": "(?:^\\s*)(:)(\\w+)(?:(\\s|(?:[\\w\\s]*\\s))?)([A-Z]\\w*)(:)(?:\\s)",
+      "name": "type.docstring.sphinx.python"
+    }
+	],
+	"repository": {}
+}
