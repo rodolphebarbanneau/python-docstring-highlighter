@@ -2,43 +2,39 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Python Docstring (google)",
 	"scopeName": "source.docstring.google.python",
-	"injectionSelector": "L:string.quoted.docstring.multi.python",
+	"injectionSelector": "L:string.quoted.docstring.multi.python, L:string.quoted.docstring.raw.multi.python",
 	"patterns": [
 		{
+      "comment": "Variable (google)",
       "captures": {
         "1": {
-          "name": "entity.name.tag.docstring.google.python"
+          "name": "punctuation.definition.tag.begin.docstring.python, docstring.variable.begin.google.python"
         },
         "2": {
-          "name": "punctuation.definition.tag.docstring.google.python"
+          "name": "entity.name.variable.docstring.python, docstring.variable.placeholder.google.python"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.end.docstring.python, docstring.variable.end.google.python"
         }
       },
-      "match": "(?:^\\s*)([A-Z]\\w*)(:+)(?:$)",
-      "name": "heading.docstring.google.python"
+      "match": "(?:^\\s*)()((?:\\*\\*|\\*|_*)?[a-z]\\w*)((?:\\s\\(.*\\))?:)(?=\\s+\\S+\\s+\\S+)",
+      "name": "docstring.variable.google.python"
     },
 		{
+      "comment": "Inline type (google)",
       "captures": {
         "1": {
-          "name": "entity.name.variable.docstring.google.python"
+          "name": "punctuation.definition.tag.begin.docstring.python, docstring.type.begin.google.python"
         },
         "2": {
-          "name": "punctuation.definition.tag.docstring.google.python"
-        }
-      },
-      "match": "(?:^\\s*)((?:\\*\\*|\\*|_)?[a-z]\\w*)(\\s*(?:\\(.*\\))?:+(?:\\s+\\S+$)?)(?:\\s)",
-      "name": "variable.docstring.google.python"
-    },
-		{
-      "captures": {
-        "1": {
-          "name": "entity.name.type.instance.docstring.google.python"
+          "name": "punctuation.definition.tag.placeholder.docstring.python, docstring.type.placeholder.google.python"
         },
-        "2": {
-          "name": "punctuation.definition.tag.docstring.google.python"
+        "3": {
+          "name": "punctuation.definition.tag.end.docstring.python, docstring.type.end.google.python"
         }
       },
-      "match": "(?:^\\s*)([A-Z]\\w*)(:+)(?:\\s)",
-      "name": "type.docstring.google.python"
+      "match": "(?<=\"{3}|\\'{3})()([^\\s:]+)(:)(?:\\s)",
+      "name": "docstring.type.google.python"
     }
 	],
 	"repository": {}

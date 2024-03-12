@@ -2,39 +2,63 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Python Docstring",
 	"scopeName": "source.docstring.python",
-	"injectionSelector": "L:string.quoted.docstring.multi.python",
+	"injectionSelector": "L:string.quoted.docstring.multi.python, L:string.quoted.docstring.raw.multi.python",
 	"patterns": [
 		{
+      "comment": "Heading",
       "captures": {
         "1": {
-          "name": "punctuation.definition.tag.begin.docstring.python"
+          "name": "punctuation.definition.tag.begin.docstring.python, docstring.heading.begin.python"
         },
         "2": {
-          "name": "entity.name.tag.docstring.python"
+          "name": "constant.character.escape.docstring.python, docstring.heading.placeholder.python"
         },
         "3": {
-          "name": "punctuation.definition.tag.end.docstring.python"
+          "name": "punctuation.definition.tag.end.docstring.python, docstring.heading.end.python"
         }
       },
-      "match": "(?:^\\s*)(\\.\\.\\s_?)([\\s\\w]+)(:+)",
-      "name": "directive.docstring.python"
+      "match": "(?:^\\s*)()(_*[A-Z]\\w*)(:|$)",
+      "name": "docstring.heading.python"
     },
     {
+      "comment": "Section separators",
+      "match": "(?:^\\s*)(=|-){3,}(?:$)",
+      "name": "punctuation.definition.tag.docstring.python, docstring.separator.python"
+    },
+		{
+      "comment": "Directives used within restructured text ",
       "captures": {
         "1": {
-          "name": "punctuation.definition.tag.begin.docstring.python"
+          "name": "punctuation.definition.tag.begin.docstring.python, docstring.directive.begin.python"
         },
         "2": {
-          "name": "constant.character.escape.docstring.python"
+          "name": "constant.character.escape.docstring.python, docstring.directive.placeholder.python"
         },
         "3": {
-          "name": "punctuation.definition.tag.end.docstring.python"
+          "name": "punctuation.definition.tag.end.docstring.python, docstring.directive.end.python"
+        }
+      },
+      "match": "(?:^\\s*)(\\.\\.\\s)([\\s\\w]+)(:+)",
+      "name": "docstring.directive.python"
+    },
+    {
+      "comment": "Inline literal expressions",
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.docstring.python, docstring.literal.begin.python"
+        },
+        "2": {
+          "name": "constant.character.escape.docstring.python, docstring.literal.placeholder.python"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.end.docstring.python, docstring.literal.end.python"
         }
       },
       "match": "(``)([^`]+)(``)",
-      "name": "inline-literal.docstring.python"
+      "name": "docstring.literal.python"
     },
     {
+      "comment": "Interpreted text expressions (function)",
       "captures": {
         "1": {
           "patterns": [
@@ -49,13 +73,13 @@
               "match": "(`)([^`]+)(`)",
               "captures": {
                 "1": {
-                  "name": "punctuation.definition.tag.begin.docstring.python"
+                  "name": "punctuation.definition.tag.begin.docstring.python, docstring.snippet.begin.function.python"
                 },
                 "2": {
-                  "name": "entity.name.function.docstring.python"
+                  "name": "entity.name.function.docstring.python, docstring.snippet.placeholder.function.python"
                 },
                 "3": {
-                  "name": "punctuation.definition.tag.end.docstring.python"
+                  "name": "punctuation.definition.tag.end.docstring.python, docstring.snippet.end.function.python"
                 }
               }
             }
@@ -63,9 +87,10 @@
         }
       },
       "match": "(:func:|:meth:)(`[^`]+`)",
-      "name": "snippet.function.docstring.python"
+      "name": "docstring.snippet.function.python"
     },
     {
+      "comment": "Interpreted text expressions (type)",
       "captures": {
         "1": {
           "patterns": [
@@ -80,13 +105,13 @@
               "match": "(`)([^`]+)(`)",
               "captures": {
                 "1": {
-                  "name": "punctuation.definition.tag.begin.docstring.python"
+                  "name": "punctuation.definition.tag.begin.docstring.python, docstring.snippet.begin.type.python"
                 },
                 "2": {
-                  "name": "entity.name.type.instance.docstring.python"
+                  "name": "entity.name.type.instance.docstring.python, docstring.snippet.placeholder.type.python"
                 },
                 "3": {
-                  "name": "punctuation.definition.tag.end.docstring.python"
+                  "name": "punctuation.definition.tag.end.docstring.python, docstring.snippet.end.type.python"
                 }
               }
             }
@@ -94,9 +119,10 @@
         }
       },
       "match": "(:class:|:exc:|:mod:|:obj:)(`[^`]+`)",
-      "name": "snippet.type.docstring.python"
+      "name": "docstring.snippet.type.python"
     },
     {
+      "comment": "Interpreted text expressions (variable)",
       "captures": {
         "1": {
           "patterns": [
@@ -111,23 +137,24 @@
               "match": "(`)([^`]+)(`)",
               "captures": {
                 "1": {
-                  "name": "punctuation.definition.tag.begin.docstring.python"
+                  "name": "punctuation.definition.tag.begin.docstring.python, docstring.snippet.begin.variable.python"
                 },
                 "2": {
-                  "name": "entity.name.variable.docstring.python"
+                  "name": "entity.name.variable.docstring.python, docstring.snippet.placeholder.variable.python"
                 },
                 "3": {
-                  "name": "punctuation.definition.tag.end.docstring.python"
+                  "name": "punctuation.definition.tag.end.docstring.python, docstring.snippet.end.variable.python"
                 }
               }
             }
           ]
         }
       },
-      "match": "(:attr:|:const:|:param:)(`[^`]+`)",
-      "name": "snippet.variable.docstring.python"
+      "match": "(:attr:|:const:|:param:|:paramref:)(`[^`]+`)",
+      "name": "docstring.snippet.variable.python"
     },
     {
+      "comment": "Interpreted text expressions (other)",
       "captures": {
         "1": {
           "patterns": [
@@ -142,13 +169,13 @@
               "match": "(`)([^`]+)(`)",
               "captures": {
                 "1": {
-                  "name": "punctuation.definition.tag.begin.docstring.python"
+                  "name": "punctuation.definition.tag.begin.docstring.python, docstring.snippet.begin.other.python"
                 },
                 "2": {
-                  "name": "entity.name.label.docstring.python"
+                  "name": "entity.name.variable.docstring.python, docstring.snippet.placeholder.other.python"
                 },
                 "3": {
-                  "name": "punctuation.definition.tag.end.docstring.python"
+                  "name": "punctuation.definition.tag.end.docstring.python, docstring.snippet.end.other.python"
                 }
               }
             }
@@ -156,41 +183,43 @@
         }
       },
       "match": "(:\\w*:)(`[^`]+`)",
-      "name": "snippet.other.docstring.python"
+      "name": "docstring.snippet.other.python"
     },
     {
+      "comment": "Interpreted text expressions",
       "captures": {
         "1": {
-          "name": "punctuation.definition.tag.begin.docstring.python"
+          "name": "punctuation.definition.tag.begin.docstring.python, docstring.snippet.begin.python"
         },
         "2": {
-          "name": "entity.name.variable.docstring.python"
+          "name": "entity.name.variable.docstring.python, docstring.snippet.placeholder.python"
         },
         "3": {
-          "name": "punctuation.definition.tag.end.docstring.python"
+          "name": "punctuation.definition.tag.end.docstring.python, docstring.snippet.end.python"
         }
       },
       "match": "(?:^|[^:])(`)([^`]+)(`_?)",
-      "name": "snippet.docstring.python"
+      "name": "docstring.snippet.python"
     }
 	],
 	"repository": {
     "identifier": {
+      "comment": "Identifier used within interpreted text expressions",
       "patterns": [
         {
           "captures": {
             "1": {
-              "name": "punctuation.definition.tag.begin.docstring.python"
+              "name": "punctuation.definition.tag.begin.docstring.python, docstring.identifier.begin.python"
             },
             "2": {
-              "name": "entity.name.tag.docstring.python"
+              "name": "entity.name.tag.docstring.python, docstring.identifier.placeholder.python"
             },
             "3": {
-              "name": "punctuation.definition.tag.end.docstring.python"
+              "name": "punctuation.definition.tag.end.docstring.python, docstring.identifier.end.python"
             }
           },
           "match": "(:)([^:]*)(:)",
-          "name": "identifier.docstring.python"
+          "name": "docstring.identifier.python"
         }
       ]
     }

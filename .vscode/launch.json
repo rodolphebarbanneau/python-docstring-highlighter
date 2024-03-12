@@ -14,6 +14,7 @@
         "--extensionDevelopmentPath=${workspaceFolder}",
         "--folder-uri=${workspaceFolder}/tests",
         "${workspaceFolder}/tests/google.py",
+        "${workspaceFolder}/tests/numpy.py",
         "${workspaceFolder}/tests/sphinx.py",
       ]
     }

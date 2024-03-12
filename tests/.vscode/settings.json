@@ -7,12 +7,53 @@
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
-        "scope": "heading.docstring.xxx",
+        "scope": "docstring.heading.placeholder",
+        "settings": {
+          "fontStyle": "bold underline",
+          "foreground": "#569cd6",
+        }
+      },
+      {
+        "scope": "docstring.directive.placeholder",
         "settings": {
           "fontStyle": "bold",
-          "foreground": "#569cd6"
+          "foreground": "#c586c0"
+        }
+      },
+      {
+        "scope": "docstring.identifier.placeholder",
+        "settings": {
+          "foreground": "#cccccc"
+        }
+      },
+      {
+        "scope": "docstring.literal.placeholder",
+        "settings": {
+          "foreground": "#d7ba7d"
+        }
+      },
+      {
+        "scope": "docstring.snippet.placeholder",
+        "settings": {
+          "fontStyle": "bold",
+          "foreground": "#f44747"
+        }
+      },
+      {
+        "scope": "docstring.variable.placeholder",
+        "settings": {
+          "fontStyle": "italic",
+          "foreground": "#9cdcfe"
+        }
+      },
+      {
+        "scope": "docstring.type.placeholder",
+        "settings": {
+          "fontStyle": "strikethrough",
+          "foreground": "#b5cea8"
         }
       }
     ]
   }
 }
+

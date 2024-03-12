@@ -3,7 +3,7 @@
   "name": "python-docstring-highlighter",
   "displayName": "Python Docstring Highlighter",
   "description": "Syntax highlighting for python docstring.",
-  "icon": "icon.png",
+  "icon": "assets/icon.png",
   "version": "0.1.0",
   "keywords": [
     "python",
@@ -42,6 +42,11 @@
       {
         "scopeName": "source.docstring.google.python",
         "path": "./syntaxes/google.tmLanguage.json",
+        "injectTo": ["source.python"]
+      },
+      {
+        "scopeName": "source.docstring.numpy.python",
+        "path": "./syntaxes/numpy.tmLanguage.json",
         "injectTo": ["source.python"]
       },
       {

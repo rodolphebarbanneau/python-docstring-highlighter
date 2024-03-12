@@ -1,0 +1,41 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Python Docstring (numpy)",
+	"scopeName": "source.docstring.numpy.python",
+	"injectionSelector": "L:string.quoted.docstring.multi.python, L:string.quoted.docstring.raw.multi.python",
+	"patterns": [
+		{
+      "comment": "Variable (numpy)",
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.docstring.python, docstring.variable.begin.numpy.python"
+        },
+        "2": {
+          "name": "entity.name.variable.docstring.python, docstring.variable.placeholder.numpy.python"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.end.docstring.python, docstring.variable.end.numpy.python"
+        }
+      },
+      "match": "(?:^\\s*)()((?:\\*\\*|\\*|_*)?[a-z]\\w*)((?:\\s:\\s.*)?)(?:$)",
+      "name": "docstring.variable.numpy.python"
+    },
+		{
+      "comment": "Inline type (numpy)",
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.tag.begin.docstring.python, docstring.type.begin.numpy.python"
+        },
+        "2": {
+          "name": "punctuation.definition.tag.placeholder.docstring.python, docstring.type.placeholder.numpy.python"
+        },
+        "3": {
+          "name": "punctuation.definition.tag.end.docstring.python, docstring.type.end.numpy.python"
+        }
+      },
+      "match": "(?<=\"{3}|\\'{3})()([^\\s:]+)(:)(?:\\s)",
+      "name": "docstring.type.numpy.python"
+    }
+	],
+	"repository": {}
+}
