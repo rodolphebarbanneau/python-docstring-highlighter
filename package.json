@@ -10,7 +10,10 @@
     "docstring",
     "highlighter",
     "google",
+    "numpy",
     "sphinx",
+    "markdown",
+    "md",
     "restructuredtext",
     "rest"
   ],
@@ -30,7 +33,9 @@
   },
   "publisher": "rodolphebarbanneau",
   "categories": [
-    "Programming Languages"
+    "Programming Languages",
+    "Themes",
+    "Visualization"
   ],
   "contributes": {
     "grammars": [
