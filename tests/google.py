@@ -98,7 +98,7 @@ def module_level_function(param1, param2=None, *args, **kwargs):
         param2 (Optional[str]): The second parameter. Defaults to None.
             Second line of description should be indented.
         *args: Variable length argument list.
-        **kwargs: Arbitrary keyword arguments.
+        **kwargs: Miscellaneous.
 
     Returns:
         bool: True if successful, False otherwise.

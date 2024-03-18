@@ -17,7 +17,7 @@
           "name": "punctuation.definition.tag.end.docstring.python, docstring.variable.end.google.python"
         }
       },
-      "match": "(?:^\\s*)()((?:\\*\\*|\\*|_*)?[a-z]\\w*)((?:\\s\\(.*\\))?:)(?=\\s+\\S+\\s+\\S+)",
+      "match": "(?:^\\s*)()((?:\\*\\*|\\*|_*)?[a-z]\\w*)((?:\\s\\(.*\\))?:)(?=\\s)",
       "name": "docstring.variable.google.python"
     },
 		{
@@ -33,7 +33,7 @@
           "name": "punctuation.definition.tag.end.docstring.python, docstring.type.end.google.python"
         }
       },
-      "match": "(?<=\"{3}|\\'{3})()([^\\s:]+)(:)(?:\\s)",
+      "match": "(?<=\"{3}|\\'{3})()([^\\s:]+)(:)(?=\\s)",
       "name": "docstring.type.google.python"
     }
 	],

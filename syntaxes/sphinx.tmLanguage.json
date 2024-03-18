@@ -23,7 +23,7 @@
           "name": "punctuation.definition.tag.end.docstring.python, docstring.variable.end.sphinx.python"
         }
       },
-      "match": "(?:^\\s*)(:)(\\w+)(?:(\\s|(?:.*\\s))?((?:\\*\\*|\\*|_)?\\w*)?)((?:=[^:]+)?:)(?:\\s)",
+      "match": "(?:^\\s*)(:)(\\w+)(?:(\\s|(?:.*\\s))?((?:\\*\\*|\\*|_)?\\w*)?)((?:=[^:]+)?:)(?=\\s)",
       "name": "docstring.variable.sphinx.python"
     },
 		{
@@ -39,7 +39,7 @@
           "name": "punctuation.definition.tag.end.docstring.python, docstring.type.end.sphinx.python"
         }
       },
-      "match": "(?<=\"{3}|\\'{3})()([^\\s:]+)(:)(?:\\s)",
+      "match": "(?<=\"{3}|\\'{3})()([^\\s:]+)(:)(?=\\s)",
       "name": "docstring.type.sphinx.python"
     }
 	],

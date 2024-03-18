@@ -33,7 +33,7 @@
           "name": "punctuation.definition.tag.end.docstring.python, docstring.type.end.numpy.python"
         }
       },
-      "match": "(?<=\"{3}|\\'{3})()([^\\s:]+)(:)(?:\\s)",
+      "match": "(?<=\"{3}|\\'{3})()([^\\s:]+)(:)(?=\\s)",
       "name": "docstring.type.numpy.python"
     }
 	],

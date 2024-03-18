@@ -89,7 +89,7 @@ def module_level_function(param1, param2=None, *args, **kwargs):
     :param int param1: The first parameter.
     :param str param2=None: The second parameter.
     :param args: Variable length argument list.
-    :param kwargs: Arbitrary keyword arguments.
+    :param kwargs: Miscellaneous.
 
     :rtype: bool
     :returns: True if successful, False otherwise.
