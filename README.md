@@ -21,7 +21,7 @@ This extension is **only compatible** with the standard [VSCode Python extension
 
 ## Extension Settings
 
-This extensions does not provide specific settings. It is designed to work out of the box with the default color theme. However, you can customize the color theme by overriding the default color theme in yout `settings.json` file (see the [Customization](#customization) section).
+This extensions does not provide specific settings. It is designed to work out of the box with the default color theme. However, you can customize the color theme by overriding the default color theme in your `settings.json` file (see the [Customization](#customization) section).
 
 ### Available Scopes
 
@@ -116,7 +116,7 @@ You can customize the color theme by overriding the default color theme in your 
 
 ### 0.2.1
 
-- Update syntax highlighting for variables in Google, NumPy, and Sphinx syntaxes
+- Updated syntax highlighting for variables in Google, NumPy, and Sphinx syntaxes
 
 ### 0.2.0
 
