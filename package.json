@@ -4,7 +4,7 @@
   "displayName": "Python Docstring Highlighter",
   "description": "Syntax highlighting for python docstring.",
   "icon": "assets/icon.png",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "keywords": [
     "python",
     "docstring",
@@ -29,7 +29,7 @@
     "url": "https://github.com/rodolphebarbanneau/python-docstring-highlighter/issues"
   },
   "engines": {
-    "vscode": "^1.87.0"
+    "vscode": "^1.65.2"
   },
   "publisher": "rodolphebarbanneau",
   "categories": [

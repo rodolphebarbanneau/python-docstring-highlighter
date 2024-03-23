@@ -114,6 +114,10 @@ You can customize the color theme by overriding the default color theme in your 
 
 ## Release Notes
 
+### 0.2.2
+
+- Updated VSCode minimum required version to `1.65.2`
+
 ### 0.2.1
 
 - Updated syntax highlighting for variables in Google, NumPy, and Sphinx syntaxes
