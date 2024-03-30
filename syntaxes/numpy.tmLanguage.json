@@ -17,7 +17,7 @@
           "name": "punctuation.definition.tag.end.docstring.python, docstring.variable.end.numpy.python"
         }
       },
-      "match": "(?:^\\s*)()((?:\\*\\*|\\*|_*)?[a-z]\\w*)((?:\\s:\\s.*)?)(?:$)",
+      "match": "(?:^\\s*)((?:-\\s*)?)((?:\\*\\*|\\*)?[a-zA-Z_]\\w*)((?:\\s:\\s.*)?)(?:$)",
       "name": "docstring.variable.numpy.python"
     },
 		{

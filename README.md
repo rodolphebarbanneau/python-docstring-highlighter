@@ -114,20 +114,26 @@ You can customize the color theme by overriding the default color theme in your 
 
 ## Release Notes
 
+### 0.2.3
+
+- Updated base heading pattern end token to match end of line
+- Updated base default placeholder style for interpreted text expression to `string.regexp`
+- Updated `google` and `numpy` variable pattern to accept a leading hyphen and a first uppercase character
+
 ### 0.2.2
 
 - Updated VSCode minimum required version to `1.65.2`
 
 ### 0.2.1
 
-- Updated syntax highlighting for variables in Google, NumPy, and Sphinx syntaxes
+- Updated syntax highlighting for variables in `google`, `numpy`, and `sphinx` syntaxes
 
 ### 0.2.0
 
 - Added documentation
 - Added raw docstring scope support
 - Renamed extension specific scopes to have a more consistent naming convention
-- Updated `google`, `numpy`, and `sphinx` variable token regex
+- Updated `google`, `numpy`, and `sphinx` variable regex pattern
 - Updated tests
 
 ### 0.1.0

@@ -17,7 +17,7 @@
           "name": "punctuation.definition.tag.end.docstring.python, docstring.heading.end.python"
         }
       },
-      "match": "(?:^\\s*)()(_*[A-Z]\\w*)(:|$)",
+      "match": "(?:^\\s*)()(_*[A-Z]\\w*)(:?$)",
       "name": "docstring.heading.python"
     },
     {
@@ -192,7 +192,7 @@
           "name": "punctuation.definition.tag.begin.docstring.python, docstring.snippet.begin.python"
         },
         "2": {
-          "name": "entity.name.variable.docstring.python, docstring.snippet.placeholder.python"
+          "name": "string.regexp.docstring.python, docstring.snippet.placeholder.python"
         },
         "3": {
           "name": "punctuation.definition.tag.end.docstring.python, docstring.snippet.end.python"
