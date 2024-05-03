@@ -28,6 +28,15 @@
 
 ## Publish the extension
 
+### VS Code Marketplace
+
 * Install `vsce` by running `npm install -g @vscode/vsce`.
 * Run `vsce package` from the command line.
 * Run `vsce publish` and open https://marketplace.visualstudio.com and publish your extension.
+
+### Open VSX
+
+* Install `ovsx` by running `npm install -g ovsx`.
+* Run `npx ovsx publish <file> -p <token>`.
+
+See https://github.com/eclipse/openvsx/wiki/publishing-extensions for more information.
